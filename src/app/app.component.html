@@ -1,1 +1,2 @@
-<app-header></app-header>
+<app-header [title]="title" (messageForApp)="readNewMessage($event)"></app-header>
+<app-search-flight></app-search-flight>
