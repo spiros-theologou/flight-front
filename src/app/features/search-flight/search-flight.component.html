@@ -1,0 +1,36 @@
+<form [formGroup]="searchForm">
+    <div class="card flex justify-content-center">
+        <p-card header="Search Flight">
+            <div class="grid">
+                <div class="field col-3">
+                    <label for="from">From</label>
+                    <input formControlName="from" class="inp" id="from" type="text" pInputText>
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="field col-3">
+                    <label for="to">To</label>
+                    <input formControlName="destination" class="inp" id="to" pInputText type="text">
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="field col-3">
+                    <label for="dep-date">Departure Date</label>
+                    <p-calendar 
+                        [showIcon]="true" 
+                        [showOnFocus]="false" 
+                        inputId="buttondisplay" 
+                        class="inp"
+                        formControlName="departureDate"/>            
+                </div>
+                <div class="field col-1">
+                    <label for="search">Go</label>
+                    <p-button (click)="searchFlight()" id="search" icon="pi pi-search" severity="primary" />       
+                </div>
+            </div>
+
+        </p-card>
+    </div>
+</form>
